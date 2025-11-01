@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -30,8 +31,14 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${bricolageGrotesque.variable} ${dmSans.variable} antialiased `}
+        className={`${bricolageGrotesque.variable} ${dmSans.variable} antialiased 
+        w-screen
+        px-28
+        py-12
+
+        `}
       >
+        <Navbar />
         {children}
       </body>
     </html>
