@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -41,9 +42,14 @@ export default function RootLayout({
         `}
       >
         <Navbar />
+
         <h1 className="text-4xl font-bricolage text-center">
           How's the sky looking today?
         </h1>
+
+        <div className="flex flex-col">
+          <Hero />
+        </div>
         {children}
       </body>
     </html>
