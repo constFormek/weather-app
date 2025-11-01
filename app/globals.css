@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
+/* adjust to white-theme later */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(243, 96%, 9%);
+  --foreground: hsl(0, 0%, 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-dmsans: var(--font-dmsans), sans-serif;
+  --font-bricolage: var(--font-bricolage), sans-serif;
+
+  /* --- Neutral Palette (Grayscale) --- */
+  --color-neutral-900: hsl(243, 96%, 9%);
+  --color-neutral-800: hsl(243, 27%, 20%);
+  --color-neutral-700: hsl(243, 23%, 24%);
+  --color-neutral-600: hsl(243, 23%, 30%);
+  --color-neutral-300: hsl(240, 6%, 70%);
+  --color-neutral-200: hsl(250, 6%, 84%);
+  --color-neutral-0: hsl(0, 0%, 100%);
+
+  /* --- Accent Colors --- */
+  --color-orange-500: hsl(28, 100%, 52%);
+  --color-blue-500: hsl(233, 67%, 56%);
+  --color-blue-700: hsl(248, 70%, 36%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: hsl(243, 96%, 9%);
+    --foreground: hsl(0, 0%, 100%);
   }
 }
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dmsans), sans-serif;
 }
