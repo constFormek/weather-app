@@ -35,10 +35,15 @@ export default function RootLayout({
         w-screen
         px-28
         py-12
-
+        flex
+        flex-col 
+        gap-16
         `}
       >
         <Navbar />
+        <h1 className="text-4xl font-bricolage text-center">
+          How's the sky looking today?
+        </h1>
         {children}
       </body>
     </html>
