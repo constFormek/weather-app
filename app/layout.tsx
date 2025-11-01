@@ -3,6 +3,7 @@ import { DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Searchbar from "@/components/Searchbar";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -39,13 +40,16 @@ export default function RootLayout({
         flex
         flex-col 
         gap-16
+        items-center
         `}
       >
         <Navbar />
 
-        <h1 className="text-4xl font-bricolage text-center">
+        <h1 className="text-5xl font-bricolage text-center">
           How's the sky looking today?
         </h1>
+
+        <Searchbar />
 
         <div className="flex flex-col">
           <Hero />
