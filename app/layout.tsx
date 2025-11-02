@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Searchbar from "@/components/Searchbar";
+import HourlyForcast from "@/components/HourlyForcast";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -51,8 +52,12 @@ export default function RootLayout({
 
         <Searchbar />
 
-        <div className="flex flex-col">
-          <Hero />
+        <div className="flex items-center gap-5">
+          <div className="flex flex-col">
+            <Hero />
+          </div>
+
+          <HourlyForcast />
         </div>
         {children}
       </body>
