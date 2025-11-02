@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Searchbar from "@/components/Searchbar";
 import HourlyForcast from "@/components/HourlyForcast";
 import WeatherStatsTile from "@/components/WeatherStatsTile";
+import DailyForcastElement from "@/components/DailyForcastElement";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -76,6 +77,57 @@ export default function RootLayout({
               <WeatherStatsTile 
                 label="Precipitation"
                 statistic="0 mm"
+              />
+            </div>
+
+            <div className="flex justify-between w-full">
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
+              />
+
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
+              />
+
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
+              />
+
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
+              />
+
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
+              />
+
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
+              />
+
+              <DailyForcastElement 
+                day="monday"
+                tempDay={20}
+                tempNight={12}
+                iconName="sunny"
               />
             </div>
           </div>
