@@ -1,14 +1,6 @@
 
 import Image from "next/image";
-
-import sunIcon from "@/public/assets/images/icon-sunny.webp";
-import drizzleIcon from "@/public/assets/images/icon-drizzle.webp";
-import fogIcon from "@/public/assets/images/icon-fog.webp"
-import overcastIcon from "@/public/assets/images/icon-overcast.webp"
-import rainIcon from "@/public/assets/images/icon-rain.webp"
-import snowIcon from "@/public/assets/images/icon-snow.webp"
-import stormIcon from "@/public/assets/images/icon-storm.webp"
-
+import HourlyForcastElement from "./HourlyForcastElement";
 
 const HourlyForcast = () => {
   return (
@@ -24,16 +16,33 @@ const HourlyForcast = () => {
             </button>
         </div>
 
-        <div className="flex w-full justify-between items-center bg-neutral-700 border border-neutral-600 rounded-md py-1 px-2">
-            <div className="flex items-center gap-1">
-                <Image src={sunIcon} width={40} height={40} alt=""/>
-
-                <h3 className="pt-0.5">5 PM</h3>
-            </div>
-
-            <h4 className="mr-2 pt-0.5">20°</h4>
-        </div>
+        <HourlyForcastElement 
+            iconName="sunny"
+            temp={20}
+            timePeriod="pm"
+            hour={5}
+        />
         
+        <HourlyForcastElement 
+            iconName="drizzle"
+            temp={12}
+            timePeriod="am"
+            hour={1}
+        />
+
+        <HourlyForcastElement 
+            iconName="partly-cloudy"
+            temp={17}
+            timePeriod="pm"
+            hour={9}
+        />
+
+        <HourlyForcastElement 
+            iconName="storm"
+            temp={5}
+            timePeriod="am"
+            hour={8}
+        />
         
     </div>
   )
