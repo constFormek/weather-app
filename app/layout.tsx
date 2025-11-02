@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Searchbar from "@/components/Searchbar";
 import HourlyForcast from "@/components/HourlyForcast";
+import WeatherStatsTile from "@/components/WeatherStatsTile";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -53,8 +54,30 @@ export default function RootLayout({
         <Searchbar />
 
         <div className="flex items-center gap-5">
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-8">
             <Hero />
+
+            <div className="flex justify-between">
+              <WeatherStatsTile 
+                label="Feels Like"
+                statistic="18°"
+              />
+
+              <WeatherStatsTile 
+                label="Humidity"
+                statistic="46%"
+              />
+
+              <WeatherStatsTile 
+                label="Wind"
+                statistic="14 km/h"
+              />
+
+              <WeatherStatsTile 
+                label="Precipitation"
+                statistic="0 mm"
+              />
+            </div>
           </div>
 
           <HourlyForcast />
