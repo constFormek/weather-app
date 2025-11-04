@@ -1,8 +1,8 @@
 
 import Image from "next/image";
-import HourlyForcastElement from "./HourlyForcastElement";
+import HourlyForecastElement from "./HourlyForecastElement";
 
-const HourlyForcast = () => {
+const HourlyForecast = () => {
   return (
     <div className='flex flex-col bg-neutral-800 rounded-xl px-6 py-6 gap-4 w-80'>
         <div className="flex items-center justify-between">
@@ -16,28 +16,28 @@ const HourlyForcast = () => {
             </button>
         </div>
 
-        <HourlyForcastElement 
+        <HourlyForecastElement 
             iconName="sunny"
             temp={20}
             timePeriod="pm"
             hour={5}
         />
         
-        <HourlyForcastElement 
+        <HourlyForecastElement 
             iconName="drizzle"
             temp={12}
             timePeriod="am"
             hour={1}
         />
 
-        <HourlyForcastElement 
+        <HourlyForecastElement 
             iconName="partly-cloudy"
             temp={17}
             timePeriod="pm"
             hour={9}
         />
 
-        <HourlyForcastElement 
+        <HourlyForecastElement 
             iconName="storm"
             temp={5}
             timePeriod="am"
@@ -48,4 +48,4 @@ const HourlyForcast = () => {
   )
 }
 
-export default HourlyForcast
+export default HourlyForecast

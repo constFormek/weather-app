@@ -30,14 +30,14 @@ type iconType =
 | "storm"
 | "partly-cloudy";
 
-interface DailyForcastElementProps {
+interface DailyForecastElementProps {
   iconName: iconType,
   day: "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday",
   tempDay: number,
   tempNight: number
 }
 
-const DailyForcastElement = ({ iconName, day, tempDay, tempNight}: DailyForcastElementProps) => {
+const DailyForecastElement = ({ iconName, day, tempDay, tempNight}: DailyForecastElementProps) => {
   const icon = iconMap[iconName];
   const validatedDay = day.substring(0,3).charAt(0).toUpperCase() + day.slice(1, 3);
   return (
@@ -55,4 +55,4 @@ const DailyForcastElement = ({ iconName, day, tempDay, tempNight}: DailyForcastE
   )
 }
 
-export default DailyForcastElement;
+export default DailyForecastElement;
