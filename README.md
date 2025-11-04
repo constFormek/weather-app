@@ -3,7 +3,7 @@
 1. Finishing UI - 
  - [X] - add subheading for daily forecast component
  - [ ] - fix paddings, margins, font-sizes, widths and heights in whole app
- - [ ] - add active/hover states for better ux
+ - [X] - add active/hover states for better ux
  - [ ] - create static dropdowns elements
  - [ ] - add loading states
  - [ ] - add error states
