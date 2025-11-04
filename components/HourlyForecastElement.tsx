@@ -30,14 +30,14 @@ type iconType =
 | "storm"
 | "partly-cloudy"
 
-interface HourlyForcastElementProps {
+interface HourlyForecastElementProps {
     iconName: iconType, // image url
     hour: number,
     timePeriod: "am" | "pm",
     temp: number,
 }
 
-const HourlyForcastElement = ({iconName, hour, timePeriod, temp} : HourlyForcastElementProps) => {
+const HourlyForecastElement = ({iconName, hour, timePeriod, temp} : HourlyForecastElementProps) => {
     const icon = iconMap[iconName];
   return (
     <div className="flex w-full justify-between items-center bg-neutral-700 border border-neutral-600 rounded-md py-1 px-2">
@@ -52,4 +52,4 @@ const HourlyForcastElement = ({iconName, hour, timePeriod, temp} : HourlyForcast
   )
 }
 
-export default HourlyForcastElement
+export default HourlyForecastElement

@@ -4,9 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Searchbar from "@/components/Searchbar";
-import HourlyForcast from "@/components/HourlyForcast";
+import HourlyForecast from "@/components/HourlyForecast";
 import WeatherStatsTile from "@/components/WeatherStatsTile";
-import DailyForcastElement from "@/components/DailyForcastElement";
+import DailyForecastElement from "@/components/DailyForecastElement";
 
 export const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -84,49 +84,49 @@ export default function RootLayout({
               <h1 className="text-xl">Daily forecast</h1>
               <div className="flex justify-between w-full">
               
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
                 iconName="sunny"
               />
 
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
                 iconName="sunny"
               />
 
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
                 iconName="sunny"
               />
 
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
                 iconName="sunny"
               />
 
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
                 iconName="sunny"
               />
 
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
                 iconName="sunny"
               />
 
-              <DailyForcastElement 
+              <DailyForecastElement 
                 day="monday"
                 tempDay={20}
                 tempNight={12}
@@ -136,7 +136,7 @@ export default function RootLayout({
             </div>
           </div>
 
-          <HourlyForcast />
+          <HourlyForecast />
         </div>
         {children}
       </body>
