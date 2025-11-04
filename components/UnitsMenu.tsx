@@ -5,12 +5,18 @@ import UnitsMenuElement from "./UnitsMenuElement";
 
 
 const UnitsMenu = () => {
-    const [isMetric, setIsMetric] = useState<boolean>(true);
+    const [unitsType, setUnitsType] = useState<'metric' | 'imperial'>('metric');
   return (
     <>
-        <button onClick={() => setIsMetric(!false)} className='px-2 py-2.5 text-[16px]'>
-            Switch to {isMetric ? "Imperial" : "Metric"}
-        </button>
+        {unitsType === "imperial" ? (
+            <button onClick={() => setUnitsType('metric')} className=' cursor-pointer px-2.5 py-2.5 text-[16px] hover:bg-neutral-700 transition rounded-lg w-full text-start'>
+            Switch to Metric
+            </button>
+        ) : (
+            <button onClick={() => setUnitsType('imperial')} className=' cursor-pointer px-2.5 py-2.5 text-[16px] hover:bg-neutral-700 transition rounded-lg w-full text-start'>
+            Switch to Imperial
+            </button>
+        )}
 
         <UnitsMenuElement 
             category="Temperature"
