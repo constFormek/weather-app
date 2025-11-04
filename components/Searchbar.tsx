@@ -18,13 +18,13 @@ const Searchbar = () => {
     }
   return (
     <form onSubmit={handleSubmit} className='flex items-center gap-3'>
-        <label htmlFor="city" className="bg-neutral-800  rounded-xl px-5 py-4 w-120 flex items-center gap-3">
-            <Image className="pt.5"  src={searchIcon} width={20} height={20} alt=""/>
+        <label htmlFor="city" className="bg-neutral-800 cursor-pointer hover:bg-neutral-700 transition  rounded-xl px-5 py-4 w-120 flex items-center gap-3">
+            <Image  src={searchIcon} width={18} height={20} alt=""/>
 
             <input className="focus-visible:outline-none focus:otuline-none placeholder:text-neutral-200" type="text" name="city" id="city" placeholder='Search for a place...' onChange={handleChange} value={cityName}/>
         </label>
 
-        <button className="bg-blue-500  rounded-xl px-5 py-4 cursor-pointer">
+        <button className="bg-blue-500 hover:bg-blue-700 transition  rounded-xl px-5 py-4 cursor-pointer">
             Search
         </button>
     </form>
