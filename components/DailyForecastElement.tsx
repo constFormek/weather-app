@@ -41,7 +41,7 @@ const DailyForecastElement = ({ iconName, day, tempDay, tempNight}: DailyForecas
   const icon = iconMap[iconName];
   const validatedDay = day.substring(0,3).charAt(0).toUpperCase() + day.slice(1, 3);
   return (
-    <div className="flex flex-col gap-2 bg-neutral-800 border border-neutral-600 rounded-xl px-2 py-3 w-25 items-center">
+    <div className="flex flex-col gap-2 bg-neutral-800 hover:bg-neutral-700 transition border border-neutral-600 rounded-xl px-2 py-3 w-25 items-center">
       <h3 className="text-center text-[18px]">{validatedDay}</h3>
 
       <Image src={icon} alt="" width={50} height={50}/>
