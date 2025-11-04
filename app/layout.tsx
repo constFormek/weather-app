@@ -80,7 +80,10 @@ export default function RootLayout({
               />
             </div>
 
-            <div className="flex justify-between w-full">
+            <div className="flex flex-col space-y-3">
+              <h1 className="text-xl">Daily forecast</h1>
+              <div className="flex justify-between w-full">
+              
               <DailyForcastElement 
                 day="monday"
                 tempDay={20}
@@ -129,6 +132,7 @@ export default function RootLayout({
                 tempNight={12}
                 iconName="sunny"
               />
+            </div>
             </div>
           </div>
 
