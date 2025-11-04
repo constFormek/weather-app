@@ -1,28 +1,36 @@
 "use client"
 
 import { useState } from "react";
+import UnitsMenuElement from "./UnitsMenuElement";
+
 
 const UnitsMenu = () => {
     const [isMetric, setIsMetric] = useState<boolean>(true);
   return (
     <>
-        <button onClick={() => setIsMetric(!false)} className=''>
+        <button onClick={() => setIsMetric(!false)} className='px-2 py-2.5 text-[16px]'>
             Switch to {isMetric ? "Imperial" : "Metric"}
         </button>
 
-        <div className="flex flex-col">
-            <p>Temperature</p>
+        <UnitsMenuElement 
+            category="Temperature"
+            elements={[
+                "Celsius (°C)",
+                "Fahrenheit (°F)"
+            ]}
+            onClick={() => {}}
+            activeElement={1}
+        />
 
-            <button className="">
-                Celsius {`(°C)`}
-            </button>
-
-            <button className="">
-                Fahrenheit {`(°F)`}
-            </button>
-
-            <hr />
-        </div>
+        <UnitsMenuElement 
+            category="Temperature"
+            elements={[
+                "Celsius (°C)",
+                "Fahrenheit (°F)"
+            ]}
+            onClick={() => {}}
+            activeElement={1}
+        />
     </>
   )
 }
