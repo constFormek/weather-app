@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='w-full flex justify-between items-center'>
         <Image src={logo} alt="logo" width={200} height={200} />
 
-        <button className="flex items-center gap-2 bg-neutral-800 rounded-md px-3 py-2.5 cursor-pointer">
+        <button className="flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 transition rounded-md px-3 py-2.5 cursor-pointer">
             <Image src={"/assets/images/icon-units.svg"} width={16} height={16} alt=""/>
 
             <p className="text-sm">Units</p>

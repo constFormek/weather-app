@@ -8,7 +8,7 @@ const HourlyForecast = () => {
         <div className="flex items-center justify-between">
             <h3 className="text-[18px]">Hourly Forcast</h3>
 
-            <button className="flex items-center gap-2 bg-neutral-600 rounded-md px-3 py-2 cursor-pointer">
+            <button className="flex hover:bg-neutral-700 transition items-center gap-2 bg-neutral-600 rounded-md px-3 py-2 cursor-pointer">
             
                 <p className="text-sm">Tuesday</p>
             
