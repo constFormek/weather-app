@@ -2,20 +2,21 @@
 
 interface UnitsMenuElementProps {
     category: string,
-    elements: string[],
-    activeElement: number,
-    onClick: () => void,
+    items: string[],
+    activeIndex: number
+    categoryIndex: number,
+    onClick: (categoryIndex: number, newItemIndex: number) => void,
 }
 
-const UnitsMenuElement = ({category, elements, onClick, activeElement}: UnitsMenuElementProps) => {
+const UnitsMenuElement = ({category, items, onClick, activeIndex, categoryIndex}: UnitsMenuElementProps) => {
   return (
     <div className="flex flex-col  gap-2 w-full">
         <p className="text-neutral-300 text-sm px-2 pt-1.5 ">{category}</p>
 
        <div className="flex flex-col items-start gap-1">
-            {elements.map((el, index) => (
-            <button onClick={onClick} key={index} className={`${activeElement === index ? "bg-neutral-700 border border-neutral-600" : "hover:bg-neutral-700"}  rounded-lg px-2.5 py-2.5 w-full text-start cursor-pointer transition`}>
-                {el}
+            {items.map((item, index) => (
+            <button onClick={() => {onClick(categoryIndex, index)}} key={index} className={`${activeIndex === index ? "bg-neutral-700  border-neutral-600" : "hover:bg-neutral-700 border-transparent"} border rounded-lg px-2.5 py-2.5 w-full text-start cursor-pointer transition`}>
+                {item}
             </button>
             ))}
        </div>
