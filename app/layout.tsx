@@ -59,7 +59,7 @@ export default function RootLayout({
           <div className="flex flex-col gap-8">
             <Hero />
 
-            <div className="grid grid-cols-2 grid-row-2 lg:flex lg:justify-between gap-4 lg:gap-0">
+            <div className="grid grid-cols-2 grid-row-2 lg:flex lg:justify-between gap-4 ">
               <WeatherStatsTile 
                 label="Feels Like"
                 statistic="18°"
