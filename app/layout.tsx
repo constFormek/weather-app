@@ -38,8 +38,9 @@ export default function RootLayout({
       <body
         className={`${bricolageGrotesque.variable} ${dmSans.variable} antialiased 
         w-screen
-        px-28
-        py-12
+        p-4
+        lg:px-28
+        lg:py-12
         flex
         flex-col 
         gap-16
@@ -48,7 +49,7 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <h1 className="text-5xl font-bricolage text-center">
+        <h1 className="text-6xl font-bricolage text-center">
           How's the sky looking today?
         </h1>
 
