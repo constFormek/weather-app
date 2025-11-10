@@ -38,8 +38,9 @@ export default function RootLayout({
       <body
         className={`${bricolageGrotesque.variable} ${dmSans.variable} antialiased 
         w-screen
-        px-28
-        py-12
+        p-4
+        lg:px-28
+        lg:py-12
         flex
         flex-col 
         gap-16
@@ -48,17 +49,17 @@ export default function RootLayout({
       >
         <Navbar />
 
-        <h1 className="text-5xl font-bricolage text-center">
+        <h1 className="text-6xl font-bricolage text-center">
           How's the sky looking today?
         </h1>
 
         <Searchbar />
 
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col lg:items-center lg:flex-row gap-5">
           <div className="flex flex-col gap-8">
             <Hero />
 
-            <div className="flex justify-between">
+            <div className="grid grid-cols-2 grid-row-2 lg:flex lg:justify-between gap-4 lg:gap-0">
               <WeatherStatsTile 
                 label="Feels Like"
                 statistic="18°"
@@ -82,56 +83,56 @@ export default function RootLayout({
 
             <div className="flex flex-col space-y-3">
               <h1 className="text-xl">Daily forecast</h1>
-              <div className="flex justify-between w-full">
-              
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
 
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
+              <div className="grid grid-cols-3 grid-rows-3 lg:flex justify-between w-full gap-4 ">
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
 
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
 
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
 
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
 
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
 
-              <DailyForecastElement 
-                day="monday"
-                tempDay={20}
-                tempNight={12}
-                iconName="sunny"
-              />
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
+
+                <DailyForecastElement 
+                  day="monday"
+                  tempDay={20}
+                  tempNight={12}
+                  iconName="sunny"
+                />
             </div>
             </div>
           </div>
